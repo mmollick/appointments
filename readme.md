@@ -41,7 +41,7 @@ The expressions below represent the type of scheduling this library currently su
 
 #### Seconds
 
-Expression: `start_iso_8061|timezone|interval`
+Expression: `start_date_time|timezone|interval`
 
 ```
 // Static Methods
@@ -59,7 +59,7 @@ $seconds->timezone($timezone);
 
 #### Minutes
 
-Expression: `start_iso_8061|timezone|interval`
+Expression: `start_date_time|timezone|interval`
 
 ```
 // Static Methods
@@ -77,7 +77,7 @@ $minutes->timezone($timezone);
 
 #### Hourly
 
-Expression: `start_iso_8061|timezone|interval`
+Expression: `start_date_time|timezone|interval`
 
 ```
 // Static Methods
@@ -95,7 +95,7 @@ $hourly->timezone($timezone);
 
 #### Daily
 
-Expression: `start_iso_8061|timezone|interval`
+Expression: `start_date_time|timezone|interval`
 
 ```
 // Static Methods
@@ -113,7 +113,7 @@ $daily->timezone($timezone);
 
 #### Weekly
 
-Expression: `start_iso_8061|timezone|interval|day_of_week`
+Expression: `start_date_time|timezone|interval|day_of_week`
 
 ```
 // Static Methods
@@ -131,7 +131,7 @@ $weekly->timezone($timezone);
 
 #### Monthly
 
-Expression: `start_iso_8061|timezone|interval|day_of_month`
+Expression: `start_date_time|timezone|interval|day_of_month`
 
 ```
 // Static Methods
@@ -149,7 +149,7 @@ $monthly->timezone($timezone);
 
 #### Monthly w/ Week
 
-Expression: `start_iso_8061|timezone|interval|week|day_of_week`
+Expression: `start_date_time|timezone|interval|week|day_of_week`
 
 ```
 // Static Methods
@@ -169,7 +169,7 @@ $monthly->timezone($timezone);
 
 #### Determine the Next Appointment
 
-The `nextRun` method allows us to calculate the next `DateTime` this appointment falls on. We can optionally specify the `$iterations` argument to specify the number of Appointments in the future we should calculate.
+The `nextAppointment` method allows us to calculate the next `DateTime` this appointment falls on. We can optionally specify the `$iterations` argument to specify the number of Appointments in the future we should calculate.
 
 ```
 $expression = Daily::createSinceNow($interval);
@@ -185,19 +185,9 @@ $expression = Daily::createSinceNow($interval);
 $expression->isDueNow($withinSeconds = 0);
 ```
 
-#### Is the Appointment on a Specific Date or Time?
-
-The `isDueAt` and `isDueAtFormat` method will determine if the Appointment is happening at a specific date or time.
-
-```
-$expression = Daily::createSinceNow($interval);
-$expression->isDueAtDateTime($dateTime);
-$expression->isDueAtFormat($string, $format);
-```
-
 #### When was the Last Appointment
 
-The `lastRun` method calculates the last Appointment. We can optionally specify the `$iterations` argument to specify how many Appointments in the past we want to calculate.
+The `lastAppointment` method calculates the last Appointment. We can optionally specify the `$iterations` argument to specify how many Appointments in the past we want to calculate.
 
 ```
 $expression = Daily::createSinceNow($interval);
@@ -206,11 +196,11 @@ $expression->lastAppointment($iterations = 0);
 
 #### When was the First Appointment?
 
-The `firstRun` method will return the very first Appointment.
+The `firstAppointment` method will return the very first Appointment.
 
 ```
 $expression = Daily::createSinceNow($interval);
-$expression->firstRun();
+$expression->firstAppointment();
 ```
 
 #### Get Expression as a String

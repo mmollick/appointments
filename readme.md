@@ -48,12 +48,12 @@ Expression: `start_iso_8061|timezone|interval`
 $seconds = Seconds::createSinceNow($interval);
 $seconds = Seconds::createFromExpression($expression);
 $seconds = Seconds::createSinceDateTime($dateTime, $interval, $timezone);
-$seconds = Seconds::createSinceFormat($date, $format, $interval, $timezone);
+$seconds = Seconds::createSinceFormat($format, $date, $interval, $timezone);
 
 // Class
 $seconds = new Seconds($interval);
 $seconds->startSinceDateTime(DateTime);
-$seconds->startSinceFormat($date, $format);
+$seconds->startSinceFormat($format, $date);
 $seconds->timezone($timezone);
 ```
 
@@ -66,12 +66,12 @@ Expression: `start_iso_8061|timezone|interval`
 $minutes Minutes::createSinceNow($interval);
 $minutes Minutes::createFromExpression($expression);
 $minutes Minutes::createSinceDateTime($dateTime, $interval, $timezone);
-$minutes Minutes::createSinceFormat($date, $format, $interval, $timezone);
+$minutes Minutes::createSinceFormat($format, $date, $interval, $timezone);
 
 // Class
 $minutes new Minutes($interval);
 $minutes->startSinceDateTime(DateTime);
-$minutes->startSinceFormat($date, $format);
+$minutes->startSinceFormat($format, $date);
 $minutes->timezone($timezone);
 ```
 
@@ -84,12 +84,12 @@ Expression: `start_iso_8061|timezone|interval`
 $hourly = Hourly::createSinceNow($interval);
 $hourly = Hourly::createFromExpression($expression);
 $hourly = Hourly::createSinceDateTime($dateTime, $interval, $timezone);
-$hourly = Hourly::createSinceFormat($date, $format, $interval, $timezone);
+$hourly = Hourly::createSinceFormat($format, $date, $interval, $timezone);
 
 // Class
 $hourly = new Hourly($interval);
 $hourly->startSinceDateTime(DateTime);
-$hourly->startSinceFormat($date, $format);
+$hourly->startSinceFormat($format, $date);
 $hourly->timezone($timezone);
 ```
 
@@ -102,12 +102,12 @@ Expression: `start_iso_8061|timezone|interval`
 $daily = Daily::createSinceNow($interval);
 $daily = Daily::createFromExpression($expression)
 $daily = Daily::createSinceDateTime($dateTime, $interval, $timezone);
-$daily = Daily::createSinceFormat($date, $format, $interval, $timezone);
+$daily = Daily::createSinceFormat($format, $date, $interval, $timezone);
 
 // Class
 $daily = new Daily($interval);
 $daily->startSinceDateTime(DateTime);
-$daily->startSinceFormat($date, $format);
+$daily->startSinceFormat($format, $date);
 $daily->timezone($timezone);
 ```
 
@@ -120,12 +120,12 @@ Expression: `start_iso_8061|timezone|interval|day_of_week`
 $weekly = Weekly::createSinceNow($interval, $dow);
 $weekly = Weekly::createFromExpression($expression);
 $weekly = Weekly::createSinceDateTime($dateTime, $interval, $dow, $timezone);
-$weekly = Weekly::createSinceFormat($date, $format, $interval, $dow, $timezone);
+$weekly = Weekly::createSinceFormat($format, $date, $interval, $dow, $timezone);
 
 // Class
 $weekly = new Weekly($interval, $dow);
 $weekly->startSinceDateTime(DateTime);
-$weekly->startSinceFormat($date, $format);
+$weekly->startSinceFormat($format, $date);
 $weekly->timezone($timezone);
 ```
 
@@ -138,12 +138,12 @@ Expression: `start_iso_8061|timezone|interval|day_of_month`
 $monthly = Monthly::createSinceNow($interval, $dom);
 $monthly = Monthly::createFromExpression($expression);
 $monthly = Monthly::createSinceDateTime($dateTime, $interval, $dom, $timezone);
-$monthly = Monthly::createSinceFormat($date, $format, $interval, $dom, $timezone);
+$monthly = Monthly::createSinceFormat($format, $date, $interval, $dom, $timezone);
 
 // Class
 $monthly = new Monthly($interval, $dom);
 $monthly->startSinceDateTime(DateTime);
-$monthly->startSinceFormat($date, $format);
+$monthly->startSinceFormat($format, $date);
 $monthly->timezone($timezone);
 ```
 
@@ -156,12 +156,12 @@ Expression: `start_iso_8061|timezone|interval|week|day_of_week`
 $monthly = MonthlyWithWeek::createSinceNow($interval, $week, $dow);
 $monthly = MonthlyWithWeek::createFromExpression($expression);
 $monthly = MonthlyWithWeek::createSinceDateTime($dateTime, $interval, $week, $dow, $timezone);
-$monthly = MonthlyWithWeek::createSinceFormat($date, $format, $interval, $week, $dow, $timezone);
+$monthly = MonthlyWithWeek::createSinceFormat($format, $date, $interval, $week, $dow, $timezone);
 
 // Class
 $monthly = new MonthlyWithWeek($interval, $week, $dow);
 $monthly->startSinceDateTime(DateTime);
-$monthly->startSinceFormat($date, $format);
+$monthly->startSinceFormat($format, $date);
 $monthly->timezone($timezone);
 ```
 
